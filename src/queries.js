@@ -14,3 +14,15 @@ export const GET_COLLECTIONS = gql`
     }
   }
 `;
+
+export const GET_COLLECTION = gql`
+  query GetCollection($id: ID!) {
+    collection(id: $id) {
+      id
+      title
+      items {
+        name
+      }
+    }
+  }
+`;
